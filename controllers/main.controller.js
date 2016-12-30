@@ -95,7 +95,7 @@
                 image_url:"images/Ross.jpg",
                 realname :"David Schwimmer",
                 birthdate:"1 Jan 1990",
-                loves : "Marriges!!",
+                loves : "Marriages!!",
                 description:"Ross Eustace Geller, Ph.D. (David Schwimmer): A paleontologist working at a museum of prehistory," +
                 " and later a professor of paleontology at New York University. The most intelligent of the six main characters" +
                 " but at the same time a clumsy, and quirky individual, he is known for occasionally being a know-it-all and prides" +

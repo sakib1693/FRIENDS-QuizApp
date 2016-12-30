@@ -5,7 +5,7 @@
               placeholder="search..."
               class="form-control"
               ng-model="vm.searchFriend">
-           <button type="button" class="btn btn-success pull-right">Start Quiz</button>
+           <a href="#!/quiz" type="button" class="btn btn-success pull-right" >Start Quiz</a>
    </form>
 
     <div class="row">
@@ -41,13 +41,17 @@
                         <div class="col-xs-4 col-xs-offset-4">
                             <img ng-src="{{vm.activeFriend.image_url}}" class="img-rounded img-responsives img-friends-modal" >
                         </div>
-                        <div class="col-sm-12">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-8 col-lg-offset-2">
                             <p>{{vm.activeFriend.description}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger pull-right" data-dismiss="modal">Close</button>
+                    <button class="btn btn-danger pull-right"
+                            data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

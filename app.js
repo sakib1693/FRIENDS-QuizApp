@@ -13,6 +13,10 @@
                 templateUrl:'views/home.html',
                 controller:'MainController'
             })
+            .when('/quiz',{
+                templateUrl:'views/quiz.view.html',
+                controller:'QuizController'
+            })
             .otherwise('/');
     }])
 })();
