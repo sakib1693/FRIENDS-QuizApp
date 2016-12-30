@@ -3,27 +3,53 @@
        <span class="glyphicon glyphicon-search"></span>
        <input type="text"
               placeholder="search..."
-              class="form-control">
+              class="form-control"
+              ng-model="vm.searchFriend">
            <button type="button" class="btn btn-success pull-right">Start Quiz</button>
    </form>
 
     <div class="row">
-        <div class="col-sm-6" ng-repeat="friend in vm.friends">
+        <div class="col-sm-6" ng-repeat="friend in vm.friends | filter: vm.searchFriend">
             <div class="well well-sm">
                 <div class="row">
                     <div class="div col-md-6">
                         <img ng-src="{{friend.image_url}}" class="img-rounded img-responsives img-friends" >
                     </div>
                     <div class="div col-md-6">
-                        <p><strong>Name : </strong>{{friend.name}}</p>
+                        <h4>{{friend.name}}</h4>
                         <p><strong>Real Name : </strong>{{friend.realname}}</p>
                         <p><strong>Birth Date : </strong>{{friend.birthdate}}</p>
                         <p><strong>Loves : </strong>{{friend.loves}}</p>
-                        <button class="btn btn-primary center-block">Details</button>
+                        <button class="btn btn-primary center-block"
+                                data-toggle="modal"
+                                data-target="#friends-info"
+                                ng-click="vm.detailFriend(friend)">Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal" id="friends-info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4>{{vm.activeFriend.name}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <img ng-src="{{vm.activeFriend.image_url}}" class="img-rounded img-responsives img-friends-modal" >
+                        </div>
+                        <div class="col-sm-12">
+                            <p>{{vm.activeFriend.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger pull-right" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
