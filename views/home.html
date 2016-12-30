@@ -1,4 +1,4 @@
-<div ng-controller="MainController">
+<div ng-controller="MainController as vm">
    <form class="form-inline well well-sm clearfix form-group has-success">
        <span class="glyphicon glyphicon-search"></span>
        <input type="text"
@@ -8,18 +8,17 @@
    </form>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6" ng-repeat="friend in vm.friends">
             <div class="well well-sm">
                 <div class="row">
                     <div class="div col-md-6">
-                        <img src="images/joey.jpg" class="img-rounded img-responsives img-friends" >
+                        <img ng-src="{{friend.image_url}}" class="img-rounded img-responsives img-friends" >
                     </div>
                     <div class="div col-md-6">
-                        <p><strong>Name</strong></p>
-                        <p><strong>Real Name</strong></p>
-                        <p><strong>Age</strong></p>
-                        <p><strong>Birth Date</strong></p>
-                        <p><strong>Loves</strong></p>
+                        <p><strong>Name : </strong>{{friend.name}}</p>
+                        <p><strong>Real Name : </strong>{{friend.realname}}</p>
+                        <p><strong>Birth Date : </strong>{{friend.birthdate}}</p>
+                        <p><strong>Loves : </strong>{{friend.loves}}</p>
                         <button class="btn btn-primary center-block">Details</button>
                     </div>
                 </div>
