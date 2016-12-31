@@ -41,6 +41,10 @@
             }
             qc.setActiveQuestion();
         }
+        
+        qc.selectAnswer = function (index) {
+            QuizService.quizQuestions[qc.activeQuestion].selected = index;
+        }
 
     }
 })();

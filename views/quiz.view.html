@@ -37,7 +37,8 @@
                     <div class="row"
                         ng-if="qc.quizData.quizQuestions[qc.activeQuestion].type === 'text'">
                         <div class="col-sm-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
-                            <div class="options">
+                            <div class="options"ng-class="{'bg-info':$index === qc.quizData.quizQuestions[qc.activeQuestion].selected}"
+                                 ng-click="qc.selectAnswer($index)">
                                 <h4>{{ans.answer}}</h4>
                             </div>
                         </div>
