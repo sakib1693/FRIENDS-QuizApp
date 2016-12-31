@@ -5,7 +5,8 @@
             <div class="btn-toolbar">
                 <button class="btn" ng-repeat="question in qc.quizData.quizQuestions"
                         ng-class="{'btn-info':question.selected !== null,
-                                    'btn-danger':question.selected == null}">
+                                    'btn-danger':question.selected == null}"
+                        ng-click="qc.setActiveQuestion($index)">
                     <span class="glyphicon"
                           ng-class="{'glyphicon-pencil':question.selected !== null,
                                       'glyphicon-question-sign':question.selected === null}"></span>
@@ -37,7 +38,7 @@
                     <div class="row"
                         ng-if="qc.quizData.quizQuestions[qc.activeQuestion].type === 'text'">
                         <div class="col-sm-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
-                            <div class="options"ng-class="{'bg-info':$index === qc.quizData.quizQuestions[qc.activeQuestion].selected}"
+                            <div class="options" ng-class="{'bg-info':$index === qc.quizData.quizQuestions[qc.activeQuestion].selected}"
                                  ng-click="qc.selectAnswer($index)">
                                 <h4>{{ans.answer}}</h4>
                             </div>
@@ -46,7 +47,8 @@
                     <div class="row"
                          ng-if="qc.quizData.quizQuestions[qc.activeQuestion].type === 'image'">
                         <div class="col-sm-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
-                            <div class="image-options">
+                            <div class="image-options" ng-class="{'image-selected':$index === qc.quizData.quizQuestions[qc.activeQuestion].selected}"
+                                 ng-click="qc.selectAnswer($index)">
                                 <img ng-src="{{ans.answer}}">
                             </div>
                         </div>

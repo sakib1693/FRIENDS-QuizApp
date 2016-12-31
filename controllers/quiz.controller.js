@@ -19,15 +19,20 @@
         qc.activeQuestion = 0;
         var numQuestionsAnswered = 0;
 
-        qc.setActiveQuestion = function () {
-            var breakout = false;
-            var quizLength = QuizService.quizQuestions.length - 1;
+        qc.setActiveQuestion = function (index) {
+            if(index === undefined){
+                var breakout = false;
+                var quizLength = QuizService.quizQuestions.length - 1;
 
-            while(!breakout){
-                qc.activeQuestion = qc.activeQuestion < quizLength ?++qc.activeQuestion:0;
-                if(QuizService.quizQuestions.selected == null){
-                    breakout = true;
+                while(!breakout){
+                    qc.activeQuestion = qc.activeQuestion < quizLength ?++qc.activeQuestion:0;
+                    if(QuizService.quizQuestions[qc.activeQuestion].selected == null){
+                        breakout = true;
+                    }
                 }
+            }
+            else{
+                qc.activeQuestion = index;
             }
         }
 
