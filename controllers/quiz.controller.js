@@ -8,7 +8,13 @@
     angular.module('quizApp')
         .controller('QuizController',QuizController);
 
-    function QuizController() {
+    QuizController.$inject=['QuizService'];
+
+    function QuizController(QuizService) {
         console.log('inside QuizController');
+
+        var qc = this;
+
+        qc.quizData = QuizService;
     }
 })();

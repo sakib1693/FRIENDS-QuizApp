@@ -7,18 +7,20 @@
     angular.module('quizApp')
         .controller('MainController',MainController);
 
-        MainController.$inject = ['QuizService'];
+        MainController.$inject = ['HomeService'];
 
-    function MainController(QuizService) {
+    function MainController(HomeService) {
         var vm =this;
         vm.friend = "";
         vm.activeFriend = {};
         vm.detailFriend = detailFriend;
+
+        vm.friends = HomeService.getFriends();
+
+
         function detailFriend(index) {
             vm.activeFriend = index;
         }
-
-        vm.friends = QuizService.getFriends();
 
         vm.searchFriend = "";
 

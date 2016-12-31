@@ -5,9 +5,9 @@
     'use strict';
 
     angular.module('quizApp')
-        .factory('QuizService',QuizService);
+        .factory('HomeService',HomeService);
 
-    function QuizService() {
+    function HomeService() {
 
         var data = [
             {
@@ -123,7 +123,7 @@
                 " revealed that Monica is infertile. In the final season of the series, they adopt two children - Erica " +
                 "and Jack."
             }
-        ]
+        ];
         var fac = {};
 
         fac.getFriends = function(){
