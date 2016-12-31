@@ -17,8 +17,30 @@
 
         qc.quizData = QuizService;
         qc.activeQuestion = 0;
-        qc.questionAnswered = function () {
-            
+        var numQuestionsAnswered = 0;
+
+        qc.setActiveQuestion = function () {
+            var breakout = false;
+            var quizLength = QuizService.quizQuestions.length - 1;
+
+            while(!breakout){
+                qc.activeQuestion = qc.activeQuestion < quizLength ?++qc.activeQuestion:0;
+                if(QuizService.quizQuestions.selected == null){
+                    breakout = true;
+                }
+            }
         }
+
+        qc.questionAnswered = function (){
+            var quizLength = QuizService.quizQuestions.length;
+            if(QuizService.quizQuestions[qc.activeQuestion].selected !== null){
+                numQuestionsAnswered++;
+                if(numQuestionsAnswered >= quizLength){
+                    //finalize quiz
+                }
+            }
+            qc.setActiveQuestion();
+        }
+
     }
 })();
