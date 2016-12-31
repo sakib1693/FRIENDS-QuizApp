@@ -28,4 +28,22 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <h3>Question:</h3>
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>{{qc.activeQuestion+1}}.{{qc.quizData.quizQuestions[qc.activeQuestion].text}}</h4>
+                    <div class="row">
+                        <div class="col-xs-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
+                            <div class="options">
+                                <h4>{{ans.answer}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-warning pull-left" ng-click="qc.questionAnswered()">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

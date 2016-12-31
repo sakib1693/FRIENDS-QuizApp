@@ -11,3 +11,14 @@ body{
     width: 200px;
     height: 200px;
 }
+
+.options{
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    padding: 15px 20px;
+    margin: 10px;
+}
+
+.options:hover{
+    cursor: pointer;
+}

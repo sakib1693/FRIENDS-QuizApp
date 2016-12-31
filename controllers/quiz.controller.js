@@ -16,5 +16,9 @@
         var qc = this;
 
         qc.quizData = QuizService;
+        qc.activeQuestion = 0;
+        qc.questionAnswered = function () {
+            
+        }
     }
 })();
