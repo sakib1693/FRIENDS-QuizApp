@@ -34,10 +34,19 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h4>{{qc.activeQuestion+1}}.{{qc.quizData.quizQuestions[qc.activeQuestion].text}}</h4>
-                    <div class="row">
-                        <div class="col-xs-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
+                    <div class="row"
+                        ng-if="qc.quizData.quizQuestions[qc.activeQuestion].type === 'text'">
+                        <div class="col-sm-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
                             <div class="options">
                                 <h4>{{ans.answer}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"
+                         ng-if="qc.quizData.quizQuestions[qc.activeQuestion].type === 'image'">
+                        <div class="col-sm-6" ng-repeat="ans in qc.quizData.quizQuestions[qc.activeQuestion].possibilities">
+                            <div class="image-options">
+                                <img ng-src="{{ans.answer}}">
                             </div>
                         </div>
                     </div>
