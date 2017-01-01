@@ -18,6 +18,8 @@
         qc.quizData = QuizService;
         qc.activeQuestion = 0;
         var numQuestionsAnswered = 0;
+        qc.error = false;
+        qc.finalise = false;
 
         qc.setActiveQuestion = function (index) {
             if(index === undefined){
@@ -26,6 +28,11 @@
 
                 while(!breakout){
                     qc.activeQuestion = qc.activeQuestion < quizLength ?++qc.activeQuestion:0;
+
+                    if(qc.activeQuestion === 0){
+                        qc.error = true;
+                    }
+
                     if(QuizService.quizQuestions[qc.activeQuestion].selected == null){
                         breakout = true;
                     }
@@ -42,6 +49,15 @@
                 numQuestionsAnswered++;
                 if(numQuestionsAnswered >= quizLength){
                     //finalize quiz
+                    for(var i = 0; i < quizLength; i++){
+                        if(QuizService.quizQuestions[i].selected === null){
+                            setActiveQuestion(i);
+                            return;
+                        }
+                    }
+                    qc.error = false;
+                    qc.finalise = true;
+                    return;
                 }
             }
             qc.setActiveQuestion();
