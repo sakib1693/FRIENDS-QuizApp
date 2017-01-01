@@ -17,6 +17,10 @@
                 templateUrl:'views/quiz.view.html',
                 controller:'QuizController'
             })
+            .when('/results',{
+                templateUrl:'views/results.view.html',
+                controller:'ResultsController'
+            })
             .otherwise('/');
     }])
 })();
