@@ -8,9 +8,9 @@
     angular.module('quizApp')
         .controller('QuizController',QuizController);
 
-    QuizController.$inject=['QuizService'];
+    QuizController.$inject=['QuizMatrics','QuizService'];
 
-    function QuizController(QuizService) {
+    function QuizController(QuizMatrics,QuizService) {
         console.log('inside QuizController');
 
         var qc = this;
@@ -73,6 +73,7 @@
             QuizMatrics.markQuiz();
             QuizMatrics.chnageState("quiz",false);
             QuizMatrics.chnageState("result",true);
+            console.log(QuizService.quizQuestions.correct);
         }
 
     }

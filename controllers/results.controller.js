@@ -7,9 +7,12 @@
     angular.module('quizApp')
         .controller('ResultsController',ResultsController);
 
-    function ResultsController() {
-        console.log('inside Results controller');
+        ResultsController.$inject = ['QuizMatrics','QuizService'];
 
+    function ResultsController(QuizMatrics,QuizService) {
+        var rc = this;
 
+        rc.quizMatrics = QuizMatrics;
+        rc.quizService = QuizService;
     }
 })();

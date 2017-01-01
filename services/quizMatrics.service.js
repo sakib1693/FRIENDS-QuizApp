@@ -10,7 +10,7 @@
 
     QuizMatrics.$inject = ['QuizService'];
 
-    function QuizMatrics() {
+    function QuizMatrics(QuizService) {
         var quizObj = {
             quizActive: false,
             chnageState: changeState,
