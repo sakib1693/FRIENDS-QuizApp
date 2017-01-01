@@ -36,7 +36,7 @@
             Error!You have not answered all the questions!
             <button class="close" ng-click="qc.error = false">&times</button>
         </div>
-        <div class="well well-sm">
+        <div class="well well-sm" ng-hide="qc.finalise">
             <div class="row">
                 <div class="col-xs-12">
                     <h4>{{qc.activeQuestion+1}}.{{qc.quizData.quizQuestions[qc.activeQuestion].text}}</h4>
@@ -62,5 +62,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="well well-sm" ng-show="qc.finalise">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Are you sure you want to submit the quiz?</h4>
+                    <button class="btn btn-success" ng-click="qc.finaliseAnswers()">Yes</button>
+                    <button class="btn btn-danger" ng-click="qc.finalise = false">No</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

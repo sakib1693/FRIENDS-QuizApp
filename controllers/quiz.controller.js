@@ -67,5 +67,13 @@
             QuizService.quizQuestions[qc.activeQuestion].selected = index;
         }
 
+        qc.finaliseAnsers = function(){
+            qc.finalise = false;
+            numQuestionsAnswered = 0;
+            QuizMatrics.markQuiz();
+            QuizMatrics.chnageState("quiz",false);
+            QuizMatrics.chnageState("result",true);
+        }
+
     }
 })();
