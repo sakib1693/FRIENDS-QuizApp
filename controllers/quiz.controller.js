@@ -20,6 +20,7 @@
         var numQuestionsAnswered = 0;
         qc.error = false;
         qc.finalise = false;
+        qc.quizState = false;
 
         qc.setActiveQuestion = function (index) {
             if(index === undefined){
@@ -69,6 +70,7 @@
 
         qc.finaliseAnsers = function(){
             qc.finalise = false;
+            qc.quizState = true;
             numQuestionsAnswered = 0;
             QuizMatrics.markQuiz();
             QuizMatrics.chnageState("quiz",false);

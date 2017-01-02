@@ -31,12 +31,17 @@
     </div>
 
     <div class="row">
+        <div class="col-xs-12 top-buffer" ng-show="rc.quizState = true">
+            <h2>You scored {{rc.numCorrect}}/{{rc.quizService.quizQuestions.length}}</h2>
+            <h2><strong>{{rc.percentage | number:2}}%</strong></h2>
+        </div>
         <h3>Questions:</h3>
         <div class="well well-sm">
             <div class="row">
                 <div class="col-xs-12">
                 <h4>{{rc.activeQuestion+1}}.{{rc.quizService.quizQuestions[rc.activeQuestion].text}}</h4>
-                    <div class="row">
+                    <div class="row"
+                         ng-if="rc.quizService.quizQuestions[rc.activeQuestion].type === 'text'">
                         <div class="col-sm-6" ng-repeat="ans in rc.quizService.quizQuestions[rc.activeQuestion].possibilities">
                                 <h4 class="options" ng-class="rc.getAnswerClass($index)">
                                     {{ans.answer}}
@@ -48,6 +53,18 @@
                                 </h4>
                         </div>
                     </div>
+
+                    <div class="row"
+                         ng-if="rc.quizService.quizQuestions[rc.activeQuestion].type === 'image'">
+                        <div class="col-sm-6" ng-repeat="ans in rc.quizService.quizQuestions[rc.activeQuestion].possibilities">
+                            <div class="image-options"
+                                 ng-class="rc.getAnswerClass($index)"
+                                 ng-click="rc.selectAnswer($index)">
+                                <img ng-src="{{ans.answer}}">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
