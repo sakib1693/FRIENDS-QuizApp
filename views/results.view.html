@@ -29,4 +29,29 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <h3>Questions:</h3>
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-xs-12">
+                <h4>{{rc.activeQuestion+1}}.{{rc.quizService.quizQuestions[rc.activeQuestion].text}}</h4>
+                    <div class="row">
+                        <div class="col-sm-6" ng-repeat="ans in rc.quizService.quizQuestions[rc.activeQuestion].possibilities">
+                                <h4 class="options" ng-class="rc.getAnswerClass($index)">
+                                    {{ans.answer}}
+                                <p class="pull-right"
+                                   ng-show="$index !== rc.quizMatrics.correctAnswers[rc.activeQuestion] &&
+                                            $index === rc.quizService.quizQuestions[rc.activeQuestion].selected">Your Answer</p>
+                                <p class="pull-right"
+                                    ng-show="$index === rc.quizMatrics.correctAnswers[rc.activeQuestion]">Correct Answer</p>
+                                </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>

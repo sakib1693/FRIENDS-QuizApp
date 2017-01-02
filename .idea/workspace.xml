@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f7e877e-a3f5-4248-ba84-9cf22d073077" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/quiz.controller.js" afterPath="$PROJECT_DIR$/controllers/quiz.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/results.controller.js" afterPath="$PROJECT_DIR$/controllers/results.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/quizMatrics.service.js" afterPath="$PROJECT_DIR$/services/quizMatrics.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/quiz.view.html" afterPath="$PROJECT_DIR$/views/quiz.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/results.view.html" afterPath="$PROJECT_DIR$/views/results.view.html" />
     </list>
     <ignored path="project-QuizApp.iws" />
@@ -63,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="281">
@@ -76,8 +72,8 @@
       <file leaf-file-name="results.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/results.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+            <state relative-caret-position="340">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -88,8 +84,8 @@
       <file leaf-file-name="quiz.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/quiz.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="69" column="103" selection-start-line="69" selection-start-column="103" selection-end-line="69" selection-end-column="103" />
+            <state relative-caret-position="99">
+              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
               <folding>
                 <marker date="1483309773347" expanded="true" signature="285:400" ph="{...}" />
                 <marker date="1483309773347" expanded="true" signature="547:686" ph="{...}" />
@@ -98,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.view.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="results.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/results.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+            <state relative-caret-position="332">
+              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -135,7 +131,7 @@
       <file leaf-file-name="quiz.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/quiz.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="17">
               <caret line="8" column="29" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="29" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
@@ -171,8 +167,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/quiz.view.html" />
         <option value="$PROJECT_DIR$/controllers/quiz.controller.js" />
-        <option value="$PROJECT_DIR$/controllers/results.controller.js" />
         <option value="$PROJECT_DIR$/services/quizMatrics.service.js" />
+        <option value="$PROJECT_DIR$/controllers/results.controller.js" />
         <option value="$PROJECT_DIR$/views/results.view.html" />
       </list>
     </option>
@@ -360,15 +356,15 @@
       <workItem from="1483075965653" duration="19915000" />
       <workItem from="1483143997693" duration="23602000" />
       <workItem from="1483228995615" duration="9128000" />
-      <workItem from="1483307013278" duration="6269000" />
+      <workItem from="1483307013278" duration="9005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58914000" />
+    <option name="totallyTimeSpent" value="61650000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17089552" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -604,16 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/quiz.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/quizMatrics.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -624,10 +610,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/services/quiz.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="17">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/quiz.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/results.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -636,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/quiz.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="69" column="103" selection-start-line="69" selection-start-column="103" selection-end-line="69" selection-end-column="103" />
+        <state relative-caret-position="99">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
             <marker date="1483309773347" expanded="true" signature="285:400" ph="{...}" />
             <marker date="1483309773347" expanded="true" signature="547:686" ph="{...}" />
@@ -645,28 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/results.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/results.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="332">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding />
         </state>
       </provider>

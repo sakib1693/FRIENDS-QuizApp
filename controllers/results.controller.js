@@ -14,5 +14,14 @@
 
         rc.quizMatrics = QuizMatrics;
         rc.quizService = QuizService;
+        rc.activeQuestion = 0;
+
+        rc.getAnswerClass = function (index) {
+            if(index === rc.quizMatrics.correctAnswers[rc.activeQuestion]){
+                return "bg-success";
+            }else if(index === rc.quizService.quizQuestions[rc.activeQuestion].selected){
+                return "bg-danger";
+            }
+        }
     }
 })();
